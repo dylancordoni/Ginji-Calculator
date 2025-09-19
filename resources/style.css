@@ -1,6 +1,33 @@
 body {
     display: flex;
 }
-#tips {
-    
+
+#employees {
+    display: flex;
+    flex-direction: column;
+}
+
+.employee-info {
+    display: flex;
+}
+
+.label-input {
+    display: flex;
+    flex-direction: column;
+}
+
+.employee-info label {
+    display: block;
+}
+
+.employee-info input {
+    display: block;
+}
+
+#employees button {
+    align-self: flex-start;
+}
+
+#tips input {
+    display: block;
 }
