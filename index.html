@@ -4,6 +4,7 @@
         <title>Tip Calculator</title>
         <link href="resources/style.css" rel="stylesheet">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script defer src="scripts/employees.js"></script>
     </head>
 
     <body>
@@ -70,10 +71,9 @@
                     <input type="text" id="employee4-percentage" name="employee4-percentage">
                 </div>
             </div>
-            <button type="button" id="add-server-button">Add Server</button>
-            <button type="button" id="remove-server-button">Remove Server</button>
-
         </div>
+        <button type="button" id="add-server-button">Add Server</button>
+        <button type="button" id="remove-server-button">Remove Server</button>
         <div id="tips">
             <label for="credit-tips">Credit Tips:</label>
             <input type="text" id="credit-tips" name="credit-tips">
@@ -82,5 +82,6 @@
             <label for="app-tips">App Tips:</label>
             <input type="text" id="app-tips" name="app-tips">
         </div>
+        <button type="button" id="calculate">Calculate Tips</button>
     </body>
 </html>
