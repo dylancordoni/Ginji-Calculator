@@ -21,18 +21,15 @@ document.getElementById('calculate').addEventListener('click', function() {
     let totalHours = 0;
 
     Object.keys(adjustedServerInfo).forEach((serverName, index) => {
-        console.log("name: " + serverName);
-        console.log("adjusted hours: " + adjustedServerInfo[serverName]);
-        console.log(adjustedServerInfo[serverName] + totalHours);
-        totalHours = totalHours + parseInt(adjustedServerInfo[serverName]);
-        console.log("tptal hours: " + totalHours);
+        totalHours += parseFloat(adjustedServerInfo[serverName]);
+
     })
     
     Object.keys(adjustedServerInfo).forEach((serverName, index) => {
         payoutsDiv.innerHTML = `
-        <p>${serverName}'s tips: ${(parseInt(adjustedServerInfo[serverName].value) / totalHours) * serverTips} </p>
+        <p>${serverName}'s tips: ${((parseFloat(adjustedServerInfo[serverName]) / totalHours) * serverTips).toFixed(2)} </p>
         `;
-        //console.log((parseInt(adjustedServerInfo[serverName].value) / totalHours) * serverTips)
-        console.log(adjustedServerInfo[serverName].value);
+        console.log(((parseFloat(adjustedServerInfo[serverName]) / totalHours) * serverTips).toFixed(2));
+        console.log(adjustedServerInfo[serverName]);
     });
 });
