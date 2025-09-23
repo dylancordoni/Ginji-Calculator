@@ -1,5 +1,5 @@
 body {
-    display: flex;
+    display: block;
 }
 
 #employees {
@@ -30,4 +30,13 @@ body {
 
 #tips input {
     display: block;
+}
+
+.output {
+    display: flex;
+    flex-direction: column;
+}
+
+.employee-and-tips {
+    display: flex;
 }

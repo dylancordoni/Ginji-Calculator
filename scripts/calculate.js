@@ -15,8 +15,9 @@ document.getElementById('calculate').addEventListener('click', function() {
     const kitchenTips = totalTips * .2;
     const serverTips = totalTips - kitchenTips;
 
-    const payoutsDiv = document.createElement("div");
-    payoutsDiv.className = 'payouts-div';
+    const payoutsDiv = document.getElementById("output");
+
+    payoutsDiv.innerHTML = '';
 
     let totalHours = 0;
 
@@ -26,10 +27,13 @@ document.getElementById('calculate').addEventListener('click', function() {
     })
     
     Object.keys(adjustedServerInfo).forEach((serverName, index) => {
-        payoutsDiv.innerHTML = `
+        payoutsDiv.innerHTML += `
         <p>${serverName}'s tips: ${((parseFloat(adjustedServerInfo[serverName]) / totalHours) * serverTips).toFixed(2)} </p>
         `;
         console.log(((parseFloat(adjustedServerInfo[serverName]) / totalHours) * serverTips).toFixed(2));
         console.log(adjustedServerInfo[serverName]);
     });
+    payoutsDiv.innerHTML += `
+        <p>Kitchen tips: ${kitchenTips}</p>
+    `;
 });
