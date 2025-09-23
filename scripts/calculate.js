@@ -18,6 +18,7 @@ document.getElementById('calculate').addEventListener('click', function() {
     const payoutsDiv = document.getElementById("output");
 
     payoutsDiv.innerHTML = '';
+    document.getElementById("print-button-div").innerHTML= ``;
 
     let totalHours = 0;
 
@@ -35,5 +36,9 @@ document.getElementById('calculate').addEventListener('click', function() {
     });
     payoutsDiv.innerHTML += `
         <p>Kitchen tips: ${kitchenTips}</p>
+    `;
+
+    document.getElementById("print-button-div").innerHTML= `
+        <button type="button" id="print">Print</button>
     `;
 });

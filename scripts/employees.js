@@ -13,15 +13,15 @@ document.getElementById('add-server-button').addEventListener('click', function(
     employeeDiv.innerHTML = `
     <div class="label-input">
         <label for="employee${employeeCount}-name">Name:</label>
-        <input type="text" id="employee${employeeCount}-name" name="employee${employeeCount}-name">
+        <input type="text" id="employee${employeeCount}-name" name="employee${employeeCount}-name" class="employee-name">
     </div>
-    <div class="labe-input">
+    <div class="label-input">
         <label for="employee${employeeCount}-hours">Hours:</label>
-        <input type="text" id="employee${employeeCount}-hours" name="employee${employeeCount}-hours">
+        <input type="text" id="employee${employeeCount}-hours" name="employee${employeeCount}-hours" class="employee-hour">
     </div>
-    <div class="labe-input">
+    <div class="label-input">
         <label for="employee${employeeCount}-percentage">%:</label>
-        <input type="text" id="employee${employeeCount}-percentage" name="employee${employeeCount}-percentage">
+        <input type="text" id="employee${employeeCount}-percentage" name="employee${employeeCount}-percentage" class="employee-percentage">
     </div>`;
 });
 

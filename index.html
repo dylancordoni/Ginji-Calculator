@@ -1,94 +1,111 @@
 <!DOCTYPE html>
 <html>
-	<head>
-        <title>Tip Calculator</title>
-        <link href="resources/style.css" rel="stylesheet">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <script defer src="scripts/employees.js"></script>
-        <script defer src="scripts/calculate.js"></script>
-    </head>
 
-    <body>
-        <div id="employee-and-tips">
+<head>
+    <title>Tip Calculator</title>
+    <link href="resources/style.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script defer src="scripts/employees.js"></script>
+    <script defer src="scripts/calculate.js"></script>
+</head>
+
+<div id="header-div">
+    <h1>Ginji Tip Calculator</h1>
+    <img src="resources/images/ginji-logo.jpeg" alt="logo">
+</div>
+<body>
+    <div id="employee-and-tips">
         <div id="employee-stuff">
-        <div id="employees">
+            <div id="employees">
 
-            <div id="employee1" class="employee-info">
-                <div class="label-input">
-                    <label for="employee1-name">Name:</label>
-                    <input type="text" id="employee1-name" name="employee1-name">
+                <div id="employee1" class="employee-info">
+                    <div class="label-input">
+                        <label for="employee1-name">Name:</label>
+                        <input type="text" id="employee1-name" name="employee1-name" class="employee-name">
+                    </div>
+                    <div class="label-input">
+                        <label for="employee1-hours">Hours:</label>
+                        <input type="text" id="employee1-hours" name="employee1-hours" class="employee-hour">
+                    </div>
+                    <div class="label-input">
+                        <label for="employee1-percentage">%:</label>
+                        <input type="text" id="employee1-percentage" name="employee1-percentage"
+                            class="employee-percentage">
+                    </div>
                 </div>
-                <div class="label-input">
-                    <label for="employee1-hours">Hours:</label>
-                    <input type="text" id="employee1-hours" name="employee1-hours">
+
+                <div id="employee2" class="employee-info">
+                    <div class="label-input">
+                        <label for="employee2-name">Name:</label>
+                        <input type="text" id="employee2-name" name="employee2-name" class="employee-name">
+                    </div>
+                    <div class="label-input">
+                        <label for="employee2-hours">Hours:</label>
+                        <input type="text" id="employee2-hours" name="employee2-hours" class="employee-hour">
+                    </div>
+                    <div class="label-input">
+                        <label for="employee2-percentage">%:</label>
+                        <input type="text" id="employee2-percentage" name="employee2-percentage"
+                            class="employee-percentage">
+                    </div>
                 </div>
-                <div class="label-input">
-                    <label for="employee1-percentage">%:</label>
-                    <input type="text" id="employee1-percentage" name="employee1-percentage">
+
+                <div id="employee3" class="employee-info">
+                    <div class="label-input">
+                        <label for="employee3-name">Name:</label>
+                        <input type="text" id="employee3-name" name="employee3-name" class="employee-name">
+                    </div>
+                    <div class="label-input">
+                        <label for="employee3-hours">Hours:</label>
+                        <input type="text" id="employee3-hours" name="employee3-hours" class="employee-hour">
+                    </div>
+                    <div class="label-input">
+                        <label for="employee3-percentage">%:</label>
+                        <input type="text" id="employee3-percentage" name="employee3-percentage"
+                            class="employee-percentage">
+                    </div>
+                </div>
+
+                <div id="employee4" class="employee-info">
+                    <div class="label-input">
+                        <label for="employee4-name">Name:</label>
+                        <input type="text" id="employee4-name" name="employee4-name" class="employee-name">
+                    </div>
+                    <div class="label-input">
+                        <label for="employee4-hours">Hours:</label>
+                        <input type="text" id="employee4-hours" name="employee4-hours" class="employee-hour">
+                    </div>
+                    <div class="label-input">
+                        <label for="employee4-percentage">%:</label>
+                        <input type="text" id="employee4-percentage" name="employee4-percentage"
+                            class="employee-percentage">
+                    </div>
                 </div>
             </div>
-
-            <div id="employee2" class="employee-info">
-                <div class="labe-input">
-                    <label for="employee2-name">Name:</label>
-                    <input type="text" id="employee2-name" name="employee2-name">
-                </div>
-                <div class="labe-input">
-                    <label for="employee2-hours">Hours:</label>
-                    <input type="text" id="employee2-hours" name="employee2-hours">
-                </div>
-                <div class="labe-input">
-                    <label for="employee2-percentage">%:</label>
-                    <input type="text" id="employee2-percentage" name="employee2-percentage">
-                </div>
-            </div>
-
-            <div id="employee3" class="employee-info">
-                <div class="labe-input">
-                    <label for="employee3-name">Name:</label>
-                    <input type="text" id="employee3-name" name="employee3-name">
-                </div>
-                <div class="labe-input">
-                    <label for="employee3-hours">Hours:</label>
-                    <input type="text" id="employee3-hours" name="employee3-hours">
-                </div>
-                <div class="labe-input">
-                    <label for="employee3-percentage">%:</label>
-                    <input type="text" id="employee3-percentage" name="employee3-percentage">
-                </div>
-            </div>
-
-            <div id="employee4" class="employee-info">
-                <div class="labe-input">
-                    <label for="employee4-name">Name:</label>
-                    <input type="text" id="employee4-name" name="employee4-name">
-                </div>
-                <div class="labe-input">
-                    <label for="employee4-hours">Hours:</label>
-                    <input type="text" id="employee4-hours" name="employee4-hours">
-                </div>
-                <div class="labe-input">
-                    <label for="employee4-percentage">%:</label>
-                    <input type="text" id="employee4-percentage" name="employee4-percentage">
-                </div>
+            <div id="server-buttons">
+                <button type="button" id="add-server-button">Add Server</button>
+                <button type="button" id="remove-server-button">Remove Server</button>
             </div>
         </div>
-        <button type="button" id="add-server-button">Add Server</button>
-        <button type="button" id="remove-server-button">Remove Server</button>
-    </div>
         <div id="tips">
             <label for="credit-tips">Credit Tips:</label>
-            <input type="text" id="credit-tips" name="credit-tips">
+            <input type="text" id="credit-tips" name="credit-tips" class="tip-box">
             <label for="cash-tips">Cash Tips:</label>
-            <input type="text" id="cash-tips" name="cash-tips">
+            <input type="text" id="cash-tips" name="cash-tips" class="tip-box">
             <label for="app-tips">App Tips:</label>
-            <input type="text" id="app-tips" name="app-tips">
+            <input type="text" id="app-tips" name="app-tips" class="tip-box">
+            <button type="button" id="calculate">Calculate Tips</button>
         </div>
-    </div>
-        <button type="button" id="calculate">Calculate Tips</button>
-        <div id="output">
-
+        <div id="results">
+            <div id="output"></div>
+            <div id="print-button-div"></div>
         </div>
         
-    </body>
+    </div>
+
+
+    
+
+</body>
+
 </html>

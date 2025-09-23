@@ -1,5 +1,7 @@
 body {
     display: block;
+    background-color: black;
+    color: white;
 }
 
 #employees {
@@ -9,12 +11,11 @@ body {
 
 .employee-info {
     display: flex;
+    margin: 10px;
+    justify-content: center;
 }
 
-.label-input {
-    display: flex;
-    flex-direction: column;
-}
+
 
 .employee-info label {
     display: block;
@@ -30,6 +31,7 @@ body {
 
 #tips input {
     display: block;
+    margin: 10px;
 }
 
 .output {
@@ -37,6 +39,84 @@ body {
     flex-direction: column;
 }
 
-.employee-and-tips {
+.employee-name {
+    width: 50%;
+}
+
+#employee-and-tips {
     display: flex;
+    justify-content: left;
+}
+
+#employee-stuff {
+    padding: 5px;
+    width: 40%;
+}
+
+#tips {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px;
+    margin: 10px;
+    width: 30%;
+}
+
+#output {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: white;
+    color: black;
+}
+
+#server-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.employee-hour {
+    width: 30%;
+}
+
+.employee-percentage {
+    width: 30%;
+}
+
+.label-input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tip-box {
+    width: 20%;
+}
+
+#print {
+    margin-top: 10px;
+    width: 100%;
+}
+
+#results {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+    padding: 5px;
+    margin: 10px;
+}
+
+#header-div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px;
+    color: #ca0000;
+}
+
+#header-div img {
+    width: 20%;
 }
