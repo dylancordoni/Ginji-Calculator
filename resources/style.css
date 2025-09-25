@@ -97,7 +97,7 @@ body {
 
 #print {
     margin-top: 10px;
-    width: 100%;
+    visibility: hidden;
 }
 
 #results {
@@ -119,4 +119,13 @@ body {
 
 #header-div img {
     width: 20%;
+}
+
+button {
+    color: black;
+    background-color: white;
+    border: 2px solid #ca0000;
+    border-radius: 8px;
+    width: 125px;
+    height: 40px;
 }

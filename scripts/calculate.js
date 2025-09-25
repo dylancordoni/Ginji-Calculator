@@ -9,7 +9,9 @@ document.getElementById('calculate').addEventListener('click', function() {
     const adjustedServerInfo = {};
     servers.forEach((server, index) => {
         const info = server.children;   //these are the 'label-input's
-        adjustedServerInfo[info[0].querySelector('input').value] = info[1].querySelector('input').value * (info[2].querySelector('input').value / 100);
+        if(info[0].querySelector('input').value){
+            adjustedServerInfo[info[0].querySelector('input').value] = info[1].querySelector('input').value * (info[2].querySelector('input').value / 100);
+        }
     });
 
     const kitchenTips = totalTips * .2;
@@ -18,7 +20,6 @@ document.getElementById('calculate').addEventListener('click', function() {
     const payoutsDiv = document.getElementById("output");
 
     payoutsDiv.innerHTML = '';
-    document.getElementById("print-button-div").innerHTML= ``;
 
     let totalHours = 0;
 
@@ -38,7 +39,6 @@ document.getElementById('calculate').addEventListener('click', function() {
         <p>Kitchen tips: ${kitchenTips}</p>
     `;
 
-    document.getElementById("print-button-div").innerHTML= `
-        <button type="button" id="print">Print</button>
-    `;
+    const printButton = document.getElementById('print');
+    printButton.style.visibility = 'visible';
 });
