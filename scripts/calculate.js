@@ -1,4 +1,6 @@
 document.getElementById('calculate').addEventListener('click', function() {
+    const currentDate = new Date();
+
     const servers = document.querySelectorAll('#employees .employee-info');
     const creditTips = document.getElementById('credit-tips').value ? document.getElementById('credit-tips').value : 0;
     const cashTips = document.getElementById('cash-tips').value ? document.getElementById('cash-tips').value : 0;
@@ -19,7 +21,7 @@ document.getElementById('calculate').addEventListener('click', function() {
 
     const payoutsDiv = document.getElementById("output");
 
-    payoutsDiv.innerHTML = '';
+    payoutsDiv.innerHTML = currentDate;
 
     let totalHours = 0;
 
@@ -32,8 +34,6 @@ document.getElementById('calculate').addEventListener('click', function() {
         payoutsDiv.innerHTML += `
         <p>${serverName}'s tips: ${((parseFloat(adjustedServerInfo[serverName]) / totalHours) * serverTips).toFixed(2)} </p>
         `;
-        console.log(((parseFloat(adjustedServerInfo[serverName]) / totalHours) * serverTips).toFixed(2));
-        console.log(adjustedServerInfo[serverName]);
     });
     payoutsDiv.innerHTML += `
         <p>Kitchen tips: ${kitchenTips}</p>
