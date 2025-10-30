@@ -25,7 +25,7 @@ document.getElementById('calculate').addEventListener('click', function() {
     tipReport.innerHTML = "";
     payoutsDiv.innerHTML = "";
 
-    date.innerHTML = `${currentDate}`;
+    date.innerHTML = `${currentDate}<br><br>`;
 
     let totalHours = 0;
 
@@ -62,7 +62,7 @@ document.getElementById('calculate').addEventListener('click', function() {
     }
 
     tipReport.innerHTML += `
-    <p>Total Tips: ${totalTips}</p>
+    <p>Total Tips: ${totalTips}<br><br></p>
     `
 
 
