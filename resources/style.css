@@ -34,9 +34,17 @@ body {
     margin: 10px;
 }
 
-.output {
+#tip-results {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+#tip-output,
+#tip-report {
+    flex: 1;
+    /*padding: 10px;*/
 }
 
 .employee-name {
