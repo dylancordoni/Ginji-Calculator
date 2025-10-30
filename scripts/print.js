@@ -6,9 +6,6 @@ document.getElementById('print').addEventListener('click', function() {
     printWindow.document.write('</div></body></html>');
     printWindow.document.close();
     printWindow.focus();
-    setTimeout(() => {
-        printWindow.print();
-    }, 5000);
-    //printWindow.print();
-    //printWindow.close();
+    printWindow.print();
+    printWindow.close();
 });
